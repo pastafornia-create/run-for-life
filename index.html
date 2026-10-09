@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Run for Life · Course solidaire 5 km · Bruxelles</title>
+<meta name="description" content="Run for Life : un atelier de force mentale, une course de 5 km ouverte à tous à Koekelberg, et chaque pas pour la lutte contre la drépanocytose.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#1A1412;--paper:#F7F1E8;--card:#FFFCF7;--muted:#4A3F3A;--muted2:#6E5A4A;--rust:#8A3A12;
+  --red:#C8152B;--red-dark:#8F0E1E;--orange:#E2611E;--soft:#CFC3BA;
+  --line:rgba(26,20,18,.08);--line2:rgba(26,20,18,.12);
+  --grad-cta:linear-gradient(100deg,#D9480F,#B80F24);
+  --pad-x:clamp(16px,4vw,40px);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:'DM Sans',system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:var(--red);text-decoration:none}a:hover{color:var(--red-dark)}
+img{display:block;max-width:100%}
+.mono{font-family:'DM Mono',monospace}
+.anton{font-family:Anton,sans-serif;font-weight:400;text-transform:uppercase}
+.wrap{max-width:1320px;margin:0 auto}
+.section{padding:clamp(40px,6vw,80px) var(--pad-x);max-width:1320px;margin:0 auto}
+.eyebrow{font-family:'DM Mono',monospace;font-size:13px;text-transform:uppercase;letter-spacing:.06em;color:var(--rust);margin-bottom:12px}
+.h2{margin:0;font-family:Anton,sans-serif;font-weight:400;font-size:clamp(48px,8vw,112px);line-height:.9;text-transform:uppercase}
+.lead{margin:0;max-width:400px;font-size:17px;line-height:1.55;color:var(--muted);text-wrap:pretty}
+.head-row{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:20px 40px;margin-bottom:clamp(28px,4vw,48px)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:22px}
+.btn{display:inline-flex;align-items:center;justify-content:center;border-radius:99px;font-weight:700;transition:filter .2s,background .2s,color .2s}
+.btn-grad{background:var(--grad-cta);color:#fff}.btn-grad:hover{filter:brightness(1.08);color:#fff}
+.btn-line{border:1.5px solid var(--ink);color:var(--ink)}.btn-line:hover{background:var(--ink);color:var(--paper)}
+.noise{pointer-events:none;position:fixed;inset:0;z-index:60;opacity:.07;mix-blend-mode:multiply;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.logo{border-radius:50%;background:linear-gradient(135deg,#E2611E,#C8152B);object-fit:cover}
+
+/* Header */
+header{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(247,241,232,.88);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.hbar{max-width:1320px;margin:0 auto;padding:12px var(--pad-x);display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:flex;align-items:center;gap:10px;color:var(--ink)}.brand:hover{color:var(--ink)}
+.brand .logo{width:44px;height:44px;box-shadow:0 0 0 1px rgba(185,119,63,.35)}
+.brand span{font-family:Anton,sans-serif;font-size:20px;letter-spacing:.02em;line-height:1;white-space:nowrap}
+.dnav{display:flex;gap:28px;font-size:14px;font-weight:500;white-space:nowrap}
+.dnav a{color:var(--ink)}.dnav a:hover{color:var(--red)}
+.hright{display:flex;align-items:center;gap:12px}
+.hcta{gap:8px;padding:12px 20px;font-size:14px;white-space:nowrap}
+.burger{width:44px;height:44px;border-radius:50%;border:1px solid rgba(26,20,18,.15);background:#fff;cursor:pointer;display:none;flex-direction:column;align-items:center;justify-content:center;gap:5px}
+.burger span{width:18px;height:2px;background:var(--ink);display:block}
+.mnav{display:none;flex-direction:column;padding:8px 20px 24px;border-top:1px solid var(--line)}
+.mnav a{font-family:Anton,sans-serif;font-size:32px;color:var(--ink);padding:10px 0;border-bottom:1px solid var(--line);text-transform:uppercase}
+header.open .mnav{display:flex}
+
+/* Hero */
+.hero{padding:clamp(96px,12vw,130px) var(--pad-x) 0;max-width:1320px;margin:0 auto}
+.hero-top{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:24px 40px}
+.kicker{display:flex;align-items:center;gap:10px;font-family:'DM Mono',monospace;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--rust);margin-bottom:18px}
+.kicker i{width:10px;height:10px;border-radius:50%;background:var(--red);display:block}
+h1{margin:0;font-family:Anton,sans-serif;font-weight:400;font-size:clamp(76px,15vw,220px);line-height:.86;letter-spacing:-.005em;text-transform:uppercase}
+.grad-text{background:linear-gradient(95deg,#E2611E,#C8152B);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero-side{flex:0 1 360px;display:flex;flex-direction:column;gap:22px;padding-bottom:10px}
+.hero-visual{position:relative;margin-top:clamp(28px,4vw,48px);border-radius:clamp(18px,2.4vw,28px);overflow:hidden;min-height:clamp(440px,52vw,640px);background:repeating-linear-gradient(135deg,#E9DCCB 0 14px,#E2D3C0 14px 28px);display:flex}
+.countbox{background:var(--ink);color:var(--paper);border-radius:18px;padding:20px 22px;flex:0 1 460px;min-width:0}
+.cgrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin-top:18px}
+.cgrid div{background:rgba(247,241,232,.07);border-radius:10px;padding:10px 6px;text-align:center}
+.cgrid b{display:block;font-family:Anton,sans-serif;font-weight:400;font-size:clamp(26px,3.4vw,38px);line-height:1}
+.cgrid small{display:block;font-family:'DM Mono',monospace;font-size:11px;color:#B8A99E;margin-top:4px;text-transform:uppercase}
+.chip{padding:8px 14px;border-radius:99px;background:var(--paper);font-size:13px;font-weight:700}
+
+/* Marquee */
+@keyframes rfl-marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.marquee{margin-top:clamp(28px,4vw,44px);border-top:1px solid var(--line2);border-bottom:1px solid var(--line2);padding:16px 0;overflow:hidden}
+.mtrack{display:flex;width:max-content;animation:rfl-marquee 38s linear infinite}
+.mrun{display:flex;align-items:center;gap:28px;padding-right:28px}
+.mrun span{font-family:Anton,sans-serif;font-size:30px;text-transform:uppercase;white-space:nowrap}
+.mrun i{width:12px;height:12px;border-radius:50%;flex:none;background:var(--red)}
+.mrun i:nth-of-type(even){background:var(--orange)}
+@media (prefers-reduced-motion:reduce){.mtrack{animation:none}}
+
+/* Grids */
+.g-auto{display:grid;gap:16px}
+.timeline{list-style:none;margin:0;padding:0;position:relative}
+.timeline::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:2px;background:linear-gradient(180deg,#E2611E,#C8152B)}
+.timeline li{position:relative;padding:0 0 34px 48px}
+.timeline li::before{content:"";position:absolute;left:0;top:4px;width:24px;height:24px;border-radius:50%;background:var(--paper);border:3px solid var(--red)}
+
+/* FAQ */
+.faq-item{border-bottom:1px solid rgba(26,20,18,.15)}
+.faq-item button{width:100%;display:flex;justify-content:space-between;align-items:center;gap:16px;background:none;border:0;padding:22px 0;cursor:pointer;text-align:left;font:inherit;color:var(--ink);min-height:44px}
+.faq-item .q{font-size:clamp(18px,1.8vw,21px);font-weight:700}
+.faq-item .ic{flex:none;width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:20px;background:rgba(26,20,18,.06);color:var(--ink);transition:background .2s,color .2s}
+.faq-item p{margin:0;padding:0 52px 24px 0;font-size:16px;line-height:1.6;color:var(--muted);display:none}
+.faq-item.open .ic{background:var(--red);color:#fff}
+.faq-item.open p{display:block}
+
+.partner{height:96px;border-radius:16px;display:flex;align-items:center;justify-content:center}
+.partner.empty{border:1.5px dashed rgba(26,20,18,.2);font-family:'DM Mono',monospace;font-size:12px;color:var(--muted2)}
+
+/* Concept tiles */
+.tile{aspect-ratio:4/3;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.tile svg{width:46%;height:auto}
+.tnum{position:absolute;top:14px;right:16px;font-size:56px;line-height:1;color:rgba(255,255,255,.85)}
+
+/* Édition 2026 */
+.edition{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:12px}
+.affiche{border-radius:22px;overflow:hidden;background:#C98A55;min-height:clamp(320px,36vw,520px)}
+.affiche img{width:100%;height:100%;object-fit:cover}
+.edition.no-affiche{grid-template-columns:1fr}
+.edition.no-affiche .affiche{display:none}
+.moments{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.moment{border-radius:22px;color:#fff;padding:18px;display:flex;flex-direction:column;justify-content:space-between;min-height:clamp(150px,17vw,250px)}
+.moment span{font-size:13px;opacity:.85}
+.moment b{font-weight:400;font-size:clamp(22px,2.4vw,32px);line-height:1}
+a.partner.empty:hover{border-color:var(--red);color:var(--red)}
+
+/* Fallback logo */
+.logo-fb{border-radius:50%;background:linear-gradient(135deg,#E2611E,#C8152B);color:#fff;display:flex;align-items:center;justify-content:center;font-family:Anton,sans-serif;flex:none}
+
+/* Modal */
+.modal{position:fixed;inset:0;z-index:70;background:rgba(26,20,18,.55);display:flex;align-items:center;justify-content:center;padding:16px}
+.modal[hidden]{display:none}
+.modal-box{position:relative;background:var(--paper);border-radius:24px;padding:clamp(24px,4vw,40px);max-width:520px;width:100%;box-shadow:0 30px 80px rgba(26,20,18,.35)}
+.modal-x{position:absolute;top:14px;right:14px;width:40px;height:40px;border-radius:50%;border:0;background:rgba(26,20,18,.06);font-size:22px;cursor:pointer;color:var(--ink)}
+
+/* Mobile sticky CTA */
+.sticky{display:none;position:fixed;left:0;right:0;bottom:0;z-index:55;padding:12px 16px calc(12px + env(safe-area-inset-bottom));background:linear-gradient(180deg,rgba(247,241,232,0),#F7F1E8 40%)}
+.sticky a{display:flex;align-items:center;justify-content:space-between;min-height:56px;padding:0 22px;border-radius:99px;background:var(--grad-cta);color:#fff;font-weight:700;font-size:16px;box-shadow:0 10px 30px rgba(184,15,36,.3)}
+
+@media (max-width:1119px){
+  .dnav,.hcta{display:none}
+  .burger{display:flex}
+  .sticky{display:block}
+}
+</style>
+</head>
+<body>
+<div class="noise" aria-hidden="true"></div>
+
+<header id="hdr">
+  <div class="hbar">
+    <a href="#top" class="brand">
+      <img class="logo" src="assets/logo-run-for-hope.png" alt="Logo Run for Hope">
+      <span>RUN FOR LIFE</span>
+    </a>
+    <nav class="dnav" aria-label="Navigation principale">
+      <a href="#concept">Le concept</a><a href="#programme">Programme</a><a href="#infos">Infos pratiques</a><a href="#cause">La cause</a><a href="#faq">FAQ</a>
+    </nav>
+    <div class="hright">
+      <a class="btn btn-grad hcta js-cta" href="#">Je m'inscris →</a>
+      <button class="burger" type="button" aria-label="Menu" aria-expanded="false"><span></span><span></span></button>
+    </div>
+  </div>
+  <nav class="mnav" aria-label="Navigation mobile">
+    <a href="#concept">Le concept</a><a href="#programme">Programme</a><a href="#infos">Infos pratiques</a><a href="#cause">La cause</a><a href="#faq">FAQ</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section id="top" class="hero">
+  <div class="hero-top">
+    <div style="flex:1 1 560px;min-width:0">
+      <div class="kicker"><i></i>Course solidaire · 5 km · Bruxelles</div>
+      <h1>Run<br>for <span class="grad-text">life</span></h1>
+    </div>
+    <div class="hero-side">
+      <p style="margin:0;font-size:clamp(20px,2vw,24px);line-height:1.3;font-weight:500;text-wrap:pretty">Courir ensemble. Se dépasser. Faire du bien.</p>
+      <p style="margin:0;font-size:16px;line-height:1.55;color:var(--muted);text-wrap:pretty">Un atelier de force mentale, une course de 5 km ouverte à tous, et chaque pas pour la lutte contre la drépanocytose.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:10px">
+        <a class="btn btn-grad js-cta" href="#" style="min-height:52px;padding:0 26px;font-size:16px">Je m'inscris →</a>
+        <a class="btn btn-line" href="#cause" style="min-height:52px;padding:0 24px;font-size:16px">Je fais un don</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-visual" style="background:radial-gradient(circle at 85% 15%,#F29B62 0,rgba(242,155,98,0) 40%),radial-gradient(circle at 5% 100%,#5E0915 0,rgba(94,9,21,0) 55%),linear-gradient(120deg,#D9480F 0%,#C8152B 55%,#8F0E1E 100%)">
+    <svg aria-hidden="true" viewBox="0 0 1200 640" preserveAspectRatio="xMidYMid slice" style="position:absolute;inset:0;width:100%;height:100%">
+      <path d="M-40 520 C 160 420, 260 600, 460 500 S 760 260, 920 330 S 1160 520, 1260 380" fill="none" stroke="rgba(255,255,255,.35)" stroke-width="4" stroke-dasharray="2 18" stroke-linecap="round"/>
+      <path d="M-40 560 C 200 470, 300 640, 520 540 S 800 320, 980 390 S 1180 560, 1260 440" fill="none" stroke="rgba(255,255,255,.12)" stroke-width="40" stroke-linecap="round"/>
+      <g fill="rgba(26,20,18,.28)">
+        <rect x="760" y="250" width="300" height="120"/><rect x="845" y="190" width="130" height="70"/>
+        <path d="M850 190 Q910 90 970 190Z"/><rect x="904" y="70" width="12" height="60"/>
+        <rect x="770" y="190" width="24" height="70"/><rect x="1026" y="190" width="24" height="70"/>
+      </g>
+      <circle cx="460" cy="500" r="9" fill="#fff"/><circle cx="460" cy="500" r="22" fill="none" stroke="rgba(255,255,255,.5)" stroke-width="2"/>
+    </svg>
+    <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(26,20,18,0) 40%,rgba(26,20,18,.45) 100%)"></div>
+    <div aria-hidden="true" style="position:absolute;right:-2%;top:6%;font-family:Anton,sans-serif;font-size:clamp(160px,26vw,380px);line-height:.8;color:rgba(255,255,255,.1);pointer-events:none">5 KM</div>
+    <div style="position:relative;margin-top:auto;width:100%;padding:clamp(16px,3vw,32px);display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:16px">
+      <div class="countbox">
+        <div class="mono" style="display:flex;justify-content:space-between;gap:12px;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:#F29B62">
+          <span>Prochaine édition</span><span style="color:#B8A99E">date à confirmer</span>
+        </div>
+        <div class="anton" style="font-size:clamp(26px,3vw,34px);margin-top:8px;line-height:1.05">Dim. 26 sept. 2027 · 16:00</div>
+        <div style="font-size:14px;color:var(--soft);margin-top:4px">Basilique du Sacré-Cœur, Koekelberg</div>
+        <div class="cgrid" id="countdown" aria-live="off">
+          <div><b data-u="d">0</b><small>jours</small></div>
+          <div><b data-u="h">00</b><small>heures</small></div>
+          <div><b data-u="m">00</b><small>min</small></div>
+          <div><b data-u="s">00</b><small>sec</small></div>
+        </div>
+      </div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap">
+        <span class="chip">Gratuit</span><span class="chip">5 km</span><span class="chip">Tous niveaux</span><span class="chip">Marche ou course</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="marquee" aria-hidden="true"><div class="mtrack" id="mtrack"></div></div>
+
+<!-- STATS -->
+<section style="padding:clamp(48px,7vw,90px) var(--pad-x)">
+  <div id="stats" class="wrap" style="border-radius:clamp(18px,2.4vw,28px);background:linear-gradient(110deg,#D9480F 0%,#C8152B 60%,#9E0C20 100%);color:#fff;padding:clamp(28px,4vw,52px);position:relative;overflow:hidden">
+    <div style="position:absolute;inset:0;background:repeating-linear-gradient(100deg,rgba(255,255,255,0) 0 46px,rgba(255,255,255,.06) 46px 48px);pointer-events:none"></div>
+    <div style="position:relative;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:28px">
+      <div style="border-left:2px solid rgba(255,255,255,.35);padding-left:18px"><div class="anton js-count" data-to="5" data-suffix=" km" style="font-size:clamp(52px,6vw,84px);line-height:1">5 km</div><div style="font-size:16px;font-weight:500;margin-top:8px">à courir ou à marcher</div></div>
+      <div style="border-left:2px solid rgba(255,255,255,.35);padding-left:18px"><div class="anton" style="font-size:clamp(52px,6vw,84px);line-height:1">0 €</div><div style="font-size:16px;font-weight:500;margin-top:8px">pour s'inscrire</div></div>
+      <div style="border-left:2px solid rgba(255,255,255,.35);padding-left:18px"><div class="anton js-count" data-to="3" data-suffix=" h" style="font-size:clamp(52px,6vw,84px);line-height:1">3 h</div><div style="font-size:16px;font-weight:500;margin-top:8px">d'atelier, de course et de fête</div></div>
+      <div style="border-left:2px solid rgba(255,255,255,.35);padding-left:18px"><div class="anton" style="font-size:clamp(52px,6vw,84px);line-height:1">1</div><div style="font-size:16px;font-weight:500;margin-top:8px">cause commune</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONCEPT -->
+<section id="concept" class="section">
+  <div class="head-row">
+    <div><div class="eyebrow">01 · Le concept</div><h2 class="h2">Plus qu'une<br>course.</h2></div>
+    <p class="lead">Run for Life réunit la tête, les jambes et le cœur : on prépare son mental, on court à son rythme, et on le fait pour une cause.</p>
+  </div>
+  <div class="g-auto" style="grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr))">
+    <article class="card" style="overflow:hidden;display:flex;flex-direction:column">
+      <div class="tile" style="background:linear-gradient(135deg,#F29B62,#E2611E)"><span class="anton tnum">01</span><svg viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="60" r="14" fill="#fff"/><circle cx="60" cy="60" r="30" fill="none" stroke="rgba(255,255,255,.7)" stroke-width="3"/><circle cx="60" cy="60" r="46" fill="none" stroke="rgba(255,255,255,.4)" stroke-width="3"/><circle cx="60" cy="60" r="58" fill="none" stroke="rgba(255,255,255,.2)" stroke-width="3"/></svg></div>
+      <div style="padding:22px 22px 26px"><h3 class="anton" style="margin:0;font-size:30px;line-height:1">Mental Strength Lab</h3><p style="margin:12px 0 0;font-size:16px;line-height:1.55;color:var(--muted)">Un atelier pour travailler la force mentale : respiration, visualisation, et les outils pour tenir quand c'est dur, en course comme dans la vie.</p></div>
+    </article>
+    <article class="card" style="overflow:hidden;display:flex;flex-direction:column">
+      <div class="tile" style="background:linear-gradient(135deg,#E2611E,#C8152B)"><span class="anton tnum">02</span><svg viewBox="0 0 120 120" aria-hidden="true"><path d="M10 90 C 30 40, 55 110, 70 60 S 100 20, 112 34" fill="none" stroke="#fff" stroke-width="5" stroke-dasharray="1 12" stroke-linecap="round"/><circle cx="10" cy="90" r="7" fill="#fff"/><path d="M106 16 v24 M106 16 h14 l-4 5 4 5 h-14" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round"/></svg></div>
+      <div style="padding:22px 22px 26px"><h3 class="anton" style="margin:0;font-size:30px;line-height:1">La course</h3><p style="margin:12px 0 0;font-size:16px;line-height:1.55;color:var(--muted)">5 km autour de la Basilique, tous niveaux, à son rythme. On court, on marche, on s'encourage : personne ne finit seul.</p></div>
+    </article>
+    <article class="card" style="overflow:hidden;display:flex;flex-direction:column">
+      <div class="tile" style="background:linear-gradient(135deg,#C8152B,#5E0915)"><span class="anton tnum">03</span><svg viewBox="0 0 120 120" aria-hidden="true"><path d="M60 104 C 20 76, 6 52, 18 32 C 30 12, 54 16, 60 36 C 66 16, 90 12, 102 32 C 114 52, 100 76, 60 104Z" fill="#fff"/><path d="M60 36 L 46 92 M60 36 L 74 92" stroke="#C8152B" stroke-width="7" stroke-linecap="round"/></svg></div>
+      <div style="padding:22px 22px 26px"><h3 class="anton" style="margin:0;font-size:30px;line-height:1">La solidarité</h3><p style="margin:12px 0 0;font-size:16px;line-height:1.55;color:var(--muted)">Chaque inscription et chaque don soutiennent la lutte contre la drépanocytose aux côtés de SCDFC.</p></div>
+    </article>
+  </div>
+</section>
+
+<!-- PROGRAMME -->
+<section id="programme" class="section">
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:40px clamp(40px,6vw,96px)">
+    <div>
+      <div class="eyebrow">02 · Programme</div>
+      <h2 class="h2">Le jour J.</h2>
+      <p style="margin:20px 0 0;max-width:380px;font-size:17px;line-height:1.55;color:var(--muted)">Un dimanche après-midi, trois heures pour se retrouver. Horaires indicatifs, basés sur l'édition 2026.</p>
+      <div style="margin-top:32px;width:clamp(180px,22vw,260px);aspect-ratio:1;border-radius:50%;border:2px dashed rgba(200,21,43,.4);display:flex;align-items:center;justify-content:center;position:relative">
+        <div style="position:absolute;inset:18px;border-radius:50%;border:2px solid rgba(226,97,30,.35)"></div>
+        <div style="text-align:center"><div style="font-family:Anton,sans-serif;font-size:clamp(56px,6vw,80px);line-height:.9">5 KM</div><div class="mono" style="font-size:12px;color:var(--muted2);margin-top:6px">BOUCLE KOEKELBERG</div></div>
+      </div>
+    </div>
+    <ol class="timeline">
+      <li><div class="mono" style="font-size:14px;color:var(--rust);font-weight:500">15:00</div><div class="anton" style="font-size:clamp(28px,3vw,36px);line-height:1.05;margin-top:4px">Accueil &amp; échauffement</div><p style="margin:8px 0 0;font-size:16px;line-height:1.55;color:var(--muted);max-width:480px">Retrait des dossards sur le parvis, échauffement collectif en musique.</p></li>
+      <li><div class="mono" style="font-size:14px;color:var(--rust);font-weight:500">15:30</div><div class="anton" style="font-size:clamp(28px,3vw,36px);line-height:1.05;margin-top:4px">Mental Strength Lab</div><p style="margin:8px 0 0;font-size:16px;line-height:1.55;color:var(--muted);max-width:480px">Atelier force mentale : se préparer dans la tête avant de se lancer.</p></li>
+      <li><div class="mono" style="font-size:14px;color:var(--rust);font-weight:500">16:00</div><div class="anton" style="font-size:clamp(28px,3vw,36px);line-height:1.05;margin-top:4px">Départ de la course</div><p style="margin:8px 0 0;font-size:16px;line-height:1.55;color:var(--muted);max-width:480px">Départ groupé pour 5 km. Course ou marche, chacun à son allure.</p></li>
+      <li><div class="mono" style="font-size:14px;color:var(--rust);font-weight:500">17:00</div><div class="anton" style="font-size:clamp(28px,3vw,36px);line-height:1.05;margin-top:4px">Arrivée &amp; moment convivial</div><p style="margin:8px 0 0;font-size:16px;line-height:1.55;color:var(--muted);max-width:480px">Médailles, photos, boissons et annonce du montant collecté. Fin vers 18:00.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- INFOS -->
+<section id="infos" class="section">
+  <div class="eyebrow">03 · Infos pratiques</div>
+  <h2 class="h2" style="margin-bottom:clamp(28px,4vw,48px)">Rendez-vous<br>à la basilique.</h2>
+  <div class="g-auto" style="grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr))">
+    <div style="border-radius:22px;overflow:hidden;min-height:380px;background:#E9DCCB;border:1px solid var(--line)">
+      <iframe title="Carte Basilique de Koekelberg" loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox=4.3055%2C50.8605%2C4.3290%2C50.8730&amp;layer=mapnik&amp;marker=50.8669%2C4.3172" style="border:0;width:100%;height:100%;min-height:380px;display:block;filter:sepia(.25) saturate(.9)"></iframe>
+    </div>
+    <div class="g-auto" style="grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr))">
+      <div class="card" style="border-radius:18px;padding:22px"><div class="eyebrow" style="font-size:12px;margin:0">Lieu</div><div class="anton" style="font-size:26px;line-height:1.05;margin-top:10px">Basilique du Sacré-Cœur</div><p style="margin:8px 0 0;font-size:15px;line-height:1.55;color:var(--muted)">Parvis de la Basilique, Parc Elisabeth, 1083 Bruxelles (Koekelberg).</p></div>
+      <div class="card" style="border-radius:18px;padding:22px"><div class="eyebrow" style="font-size:12px;margin:0">Accès</div><div class="anton" style="font-size:26px;line-height:1.05;margin-top:10px">Métro, tram, bus</div><p style="margin:8px 0 0;font-size:15px;line-height:1.55;color:var(--muted)">Métro 2 et 6 arrêt Simonis, puis 10 min à pied. Tram 19 et bus 87 arrêt Basilique.</p></div>
+      <div class="card" style="border-radius:18px;padding:22px"><div class="eyebrow" style="font-size:12px;margin:0">Distance &amp; niveaux</div><div class="anton" style="font-size:26px;line-height:1.05;margin-top:10px">5 km, tous niveaux</div><p style="margin:8px 0 0;font-size:15px;line-height:1.55;color:var(--muted)">Course ou marche, sans chrono. Chacun avance à son allure, personne n'est laissé derrière.</p></div>
+      <div class="card" style="border-radius:18px;padding:22px"><div class="eyebrow" style="font-size:12px;margin:0">À apporter</div><div class="anton" style="font-size:26px;line-height:1.05;margin-top:10px">Le strict minimum</div><p style="margin:8px 0 0;font-size:15px;line-height:1.55;color:var(--muted)">Tenue confortable, baskets, gourde, et votre confirmation d'inscription sur le téléphone.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CAUSE -->
+<section id="cause" style="margin-top:clamp(40px,6vw,80px);background:var(--ink);color:var(--paper);padding:clamp(64px,9vw,120px) var(--pad-x);position:relative;overflow:hidden">
+  <div style="position:absolute;left:-10%;right:-10%;top:50%;height:clamp(180px,24vw,320px);transform:translateY(-50%) rotate(-6deg);background:repeating-linear-gradient(180deg,rgba(200,21,43,.14) 0 3px,transparent 3px 34px);pointer-events:none"></div>
+  <div class="wrap" style="position:relative;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:48px clamp(40px,6vw,96px);align-items:center">
+    <div>
+      <div class="eyebrow" style="color:#F29B62">04 · La cause</div>
+      <h2 class="h2" style="font-size:clamp(48px,7.6vw,108px)">Chaque pas<br>compte<br><span style="color:#FF5A4E">contre la<br>drépanocytose.</span></h2>
+    </div>
+    <div>
+      <p style="margin:0;font-size:clamp(18px,1.8vw,21px);line-height:1.55;text-wrap:pretty">La drépanocytose est la maladie génétique la plus répandue au monde. Elle provoque des crises de douleur intenses, de la fatigue, et reste trop peu connue.</p>
+      <p style="margin:18px 0 0;font-size:16px;line-height:1.6;color:var(--soft);text-wrap:pretty">Les fonds collectés soutiennent <strong style="color:var(--paper)">SCDFC, Sickle Cell Disease Fighting Club</strong>, qui accompagne les patients et leurs familles et sensibilise le grand public.</p>
+      <div style="margin-top:34px;background:rgba(247,241,232,.06);border:1px solid rgba(247,241,232,.12);border-radius:20px;padding:24px">
+        <div class="anton" style="font-size:clamp(30px,3.2vw,40px);line-height:1.05">Courir, c'est gratuit.<br><span style="color:#F29B62">Donner, c'est libre.</span></div>
+        <p style="margin:12px 0 0;font-size:15px;line-height:1.6;color:var(--soft)">Chaque don, petit ou grand, aide SCDFC à faire connaître la maladie et à soutenir les familles.</p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:20px;align-items:center">
+          <a class="btn js-cta don" data-modal="don" href="#" style="min-height:52px;padding:0 26px;background:var(--paper);color:var(--ink);font-size:16px">Je fais un don →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<style>.don:hover{background:#fff!important;color:var(--red)!important}</style>
+
+<!-- DERNIERE EDITION -->
+<section class="section" style="padding-top:clamp(64px,9vw,120px)">
+  <div class="head-row">
+    <div><div class="eyebrow">05 · Édition 2026</div><h2 class="h2">On y était.</h2></div>
+    <p class="lead">« Mental Strength Lab &amp; Run for Hope », dimanche 27 septembre 2026, au pied de la Basilique de Koekelberg.</p>
+  </div>
+  <div class="edition">
+    <div class="affiche" id="affiche">
+      <img src="assets/affiche-2026.jpg" alt="Affiche Run for Hope, 27.09.26">
+    </div>
+    <div class="moments">
+      <div class="moment" style="background:linear-gradient(135deg,#F29B62,#E2611E)"><span class="mono">15:00</span><b class="anton">Échauffement collectif</b></div>
+      <div class="moment" style="background:linear-gradient(135deg,#E2611E,#C8152B)"><span class="mono">15:30</span><b class="anton">Mental Strength Lab</b></div>
+      <div class="moment" style="background:linear-gradient(135deg,#C8152B,#8F0E1E)"><span class="mono">16:00</span><b class="anton">Départ, mains levées</b></div>
+      <div class="moment" style="background:linear-gradient(135deg,#8F0E1E,#1A1412)"><span class="mono">17:00</span><b class="anton">Arrivée &amp; médailles</b></div>
+    </div>
+  </div>
+  <figure style="margin:clamp(40px,6vw,72px) 0 0;display:grid;grid-template-columns:auto minmax(0,1fr);gap:20px;align-items:start;max-width:980px">
+    <span aria-hidden="true" style="font-family:Anton,sans-serif;font-size:clamp(80px,10vw,140px);line-height:.7;color:var(--red)">“</span>
+    <div>
+      <blockquote class="anton" style="margin:0;font-size:clamp(30px,4vw,54px);line-height:1.05;text-wrap:pretty">Courir ensemble. Se dépasser. Faire du bien.</blockquote>
+      <figcaption class="mono" style="margin-top:16px;font-size:13px;color:var(--muted2)">La devise de Run for Life</figcaption>
+    </div>
+  </figure>
+</section>
+
+<!-- PARTENAIRES -->
+<section class="section">
+  <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px;border-top:1px solid var(--line2);padding-top:28px;margin-bottom:24px">
+    <div class="eyebrow" style="margin:0">Ils courent avec nous</div>
+    <a class="btn btn-line" href="mailto:contact@runforlife.example" style="min-height:44px;padding:0 20px;font-size:14px">Devenir partenaire →</a>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,160px),1fr));gap:12px">
+    <div class="partner card" style="border-radius:16px;font-family:Georgia,serif;font-size:24px;color:var(--red)">SCDFC</div>
+    <div class="partner card" style="border-radius:16px;font-family:Anton,sans-serif;font-size:22px;letter-spacing:.04em">DETTY EUROPE</div>
+    <div class="partner card" style="border-radius:16px;font-family:Anton,sans-serif;font-size:18px;line-height:.95;text-align:center">MENTAL<br>STRENGTH LAB</div>
+    <a class="partner empty" href="mailto:contact@runforlife.example">Votre marque ici ?</a>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="section">
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:32px clamp(40px,6vw,96px)">
+    <div><div class="eyebrow">06 · FAQ</div><h2 class="h2">Vos<br>questions.</h2></div>
+    <div id="faqlist" style="border-top:1px solid rgba(26,20,18,.15)">
+      <div class="faq-item open"><button type="button" aria-expanded="true"><span class="q">Faut-il être sportif ?</span><span class="ic">−</span></button><p>Non. Le parcours de 5 km se fait en courant, en trottinant ou en marchant. Personne n'est chronométré, on avance ensemble et des bénévoles ferment la marche.</p></div>
+      <div class="faq-item"><button type="button" aria-expanded="false"><span class="q">Combien ça coûte ?</span><span class="ic">+</span></button><p>Rien : l'inscription est entièrement gratuite. Les dons sont libres et soutiennent SCDFC dans la lutte contre la drépanocytose.</p></div>
+      <div class="faq-item"><button type="button" aria-expanded="false"><span class="q">Où va l'argent ?</span><span class="ic">+</span></button><p>Les fonds soutiennent SCDFC (Sickle Cell Disease Fighting Club) dans la lutte contre la drépanocytose. Le montant collecté est publié après chaque édition.</p></div>
+      <div class="faq-item"><button type="button" aria-expanded="false"><span class="q">Peut-on venir en équipe ?</span><span class="ic">+</span></button><p>Oui, et c'est même encouragé : entre amis, en famille, entre collègues ou en club. Contactez-nous pour les inscriptions de groupe ou d'entreprise.</p></div>
+      <div class="faq-item"><button type="button" aria-expanded="false"><span class="q">Que se passe-t-il s'il pleut ?</span><span class="ic">+</span></button><p>On court quand même : c'est Bruxelles ! En cas d'alerte météo, les inscrits sont prévenus par e-mail et sur Instagram.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section style="padding:clamp(40px,6vw,80px) var(--pad-x)">
+  <div class="wrap" style="border-radius:clamp(22px,3vw,36px);background:linear-gradient(115deg,#D9480F 0%,#C8152B 55%,#8F0E1E 100%);color:#fff;padding:clamp(48px,8vw,110px) clamp(24px,5vw,72px);position:relative;overflow:hidden">
+    <div style="position:absolute;right:-6%;bottom:-18%;width:clamp(280px,40vw,560px);aspect-ratio:1;border-radius:50%;border:clamp(24px,3vw,44px) solid rgba(255,255,255,.08)"></div>
+    <div style="position:absolute;right:4%;bottom:-6%;width:clamp(160px,22vw,320px);aspect-ratio:1;border-radius:50%;border:clamp(16px,2vw,28px) solid rgba(255,255,255,.08)"></div>
+    <h2 class="h2" style="position:relative;font-size:clamp(52px,9vw,140px);line-height:.88;max-width:900px">Prêt·e à courir pour la vie ?</h2>
+    <div style="position:relative;display:flex;flex-wrap:wrap;gap:12px;margin-top:36px;align-items:center">
+      <a class="btn js-cta final" href="#" style="min-height:56px;padding:0 30px;background:#fff;color:#B80F24;font-size:17px">Je m'inscris →</a>
+      <span style="font-size:16px;font-weight:500">5 km · tous niveaux · Koekelberg</span>
+    </div>
+  </div>
+</section>
+<style>.final:hover{background:var(--ink)!important;color:#fff!important}</style>
+
+<!-- FOOTER -->
+<footer style="background:var(--ink);color:var(--soft);margin-top:clamp(40px,6vw,80px);padding:clamp(48px,6vw,72px) var(--pad-x) 120px">
+  <div class="wrap">
+    <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:36px">
+      <div style="display:flex;align-items:center;gap:14px">
+        <img class="logo" src="assets/logo-run-for-hope.png" alt="Logo Run for Hope" style="width:64px;height:64px">
+        <span style="font-family:Anton,sans-serif;font-size:32px;color:var(--paper);line-height:1">RUN FOR LIFE</span>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:24px 48px;flex:0 1 560px;font-size:15px">
+        <div style="display:flex;flex-direction:column;gap:10px"><span class="mono" style="font-size:12px;text-transform:uppercase;color:#8C7E74">Suivre</span><a href="https://instagram.com/runforhope.be" target="_blank" rel="noopener" style="color:var(--paper)">Instagram @runforhope.be</a></div>
+        <div style="display:flex;flex-direction:column;gap:10px"><span class="mono" style="font-size:12px;text-transform:uppercase;color:#8C7E74">Contact</span><a href="mailto:contact@runforlife.example" style="color:var(--paper)">contact@runforlife.example</a></div>
+      </div>
+    </div>
+    <div style="margin-top:48px;padding-top:20px;border-top:1px solid rgba(247,241,232,.12);display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;font-size:13px">
+      <span>Organisé avec DETTY EUROPE, au profit de SCDFC</span>
+      <span>© 2026 Run for Life, Bruxelles</span>
+    </div>
+  </div>
+</footer>
+
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
+  <div class="modal-box">
+    <button type="button" class="modal-x" aria-label="Fermer">×</button>
+    <div class="eyebrow" id="modal-kicker">Édition 2027</div>
+    <h3 class="anton" id="modal-title" style="margin:0;font-size:clamp(34px,5vw,48px);line-height:.95">Les inscriptions ouvrent bientôt.</h3>
+    <p id="modal-text" style="margin:14px 0 0;font-size:16px;line-height:1.6;color:var(--muted)">L'inscription sera gratuite. Suivez-nous sur Instagram pour être prévenu·e dès l'ouverture, ou écrivez-nous.</p>
+    <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:22px">
+      <a class="btn btn-grad" href="https://instagram.com/runforhope.be" target="_blank" rel="noopener" style="min-height:48px;padding:0 22px;font-size:15px">Suivre @runforhope.be</a>
+      <a class="btn btn-line" href="mailto:contact@runforlife.example" style="min-height:48px;padding:0 22px;font-size:15px">Nous écrire</a>
+    </div>
+  </div>
+</div>
+
+<div class="sticky"><a class="js-cta" href="#"><span>Je m'inscris</span><span class="mono" style="font-size:13px;font-weight:500"><span id="shortcount">0 j</span> →</span></a></div>
+
+<script>
+(function () {
+  var TARGET = new Date('2027-09-26T16:00:00+02:00').getTime();
+
+  // Fenêtre « bientôt » pour les boutons d'inscription et de don (pas de lien externe)
+  var modal = document.getElementById('modal'), lastFocus = null;
+  var copy = {
+    inscription: ['Édition 2027', 'Les inscriptions ouvrent bientôt.', "L'inscription sera gratuite. Suivez-nous sur Instagram pour être prévenu·e dès l'ouverture, ou écrivez-nous."],
+    don: ['Faire un don', 'Merci pour votre soutien.', "Pour faire un don au profit de SCDFC, écrivez-nous : nous vous indiquerons comment contribuer."]
+  };
+  function openModal(kind) {
+    var c = copy[kind] || copy.inscription;
+    document.getElementById('modal-kicker').textContent = c[0];
+    document.getElementById('modal-title').textContent = c[1];
+    document.getElementById('modal-text').textContent = c[2];
+    lastFocus = document.activeElement;
+    modal.hidden = false;
+    document.body.style.overflow = 'hidden';
+    modal.querySelector('.modal-x').focus();
+  }
+  function closeModal() {
+    modal.hidden = true;
+    document.body.style.overflow = '';
+    if (lastFocus) lastFocus.focus();
+  }
+  document.querySelectorAll('.js-cta').forEach(function (a) {
+    a.addEventListener('click', function (e) { e.preventDefault(); openModal(a.dataset.modal || 'inscription'); });
+  });
+  modal.querySelector('.modal-x').addEventListener('click', closeModal);
+  modal.addEventListener('click', function (e) { if (e.target === modal) closeModal(); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !modal.hidden) closeModal(); });
+
+  // Menu mobile
+  var hdr = document.getElementById('hdr'), burger = hdr.querySelector('.burger');
+  burger.addEventListener('click', function () {
+    var open = hdr.classList.toggle('open');
+    burger.setAttribute('aria-expanded', open);
+  });
+  hdr.querySelectorAll('.mnav a').forEach(function (a) {
+    a.addEventListener('click', function () { hdr.classList.remove('open'); burger.setAttribute('aria-expanded', 'false'); });
+  });
+
+  // Compte à rebours
+  var units = {}; document.querySelectorAll('#countdown [data-u]').forEach(function (el) { units[el.dataset.u] = el; });
+  var shortcount = document.getElementById('shortcount');
+  var pad = function (n) { return String(n).padStart(2, '0'); };
+  function tick() {
+    var d = Math.max(0, TARGET - Date.now()) / 1000;
+    var days = Math.floor(d / 86400);
+    units.d.textContent = days;
+    units.h.textContent = pad(Math.floor(d % 86400 / 3600));
+    units.m.textContent = pad(Math.floor(d % 3600 / 60));
+    units.s.textContent = pad(Math.floor(d % 60));
+    shortcount.textContent = days + ' j';
+  }
+  tick(); setInterval(tick, 1000);
+
+  // Marquee
+  var words = ['Courir ensemble', 'Se dépasser', 'Faire du bien', 'Mental Strength Lab', '5 km pour la vie', 'Koekelberg · Bruxelles'];
+  var run = words.map(function (w) { return '<span>' + w + '</span><i></i>'; }).join('');
+  document.getElementById('mtrack').innerHTML = '<div class="mrun">' + run + '</div><div class="mrun">' + run + '</div>';
+
+  // FAQ (un seul item ouvert à la fois)
+  var items = document.querySelectorAll('.faq-item');
+  items.forEach(function (it) {
+    it.querySelector('button').addEventListener('click', function () {
+      var wasOpen = it.classList.contains('open');
+      items.forEach(function (x) {
+        x.classList.remove('open');
+        x.querySelector('button').setAttribute('aria-expanded', 'false');
+        x.querySelector('.ic').textContent = '+';
+      });
+      if (!wasOpen) {
+        it.classList.add('open');
+        it.querySelector('button').setAttribute('aria-expanded', 'true');
+        it.querySelector('.ic').textContent = '−';
+      }
+    });
+  });
+
+  // Chiffres qui montent au scroll
+  var stats = document.getElementById('stats');
+  var io = new IntersectionObserver(function (es) {
+    es.forEach(function (e) {
+      if (!e.isIntersecting) return;
+      var t0 = performance.now();
+      (function step(t) {
+        var p = Math.min(1, (t - t0) / 1600), k = 1 - Math.pow(1 - p, 3);
+        stats.querySelectorAll('.js-count').forEach(function (el) { el.textContent = Math.round(+el.dataset.to * k) + (el.dataset.suffix || ''); });
+        if (p < 1) requestAnimationFrame(step);
+      })(t0);
+      io.unobserve(e.target);
+    });
+  }, { threshold: 0.3 });
+  io.observe(stats);
+
+  // Images absentes : logo remplacé par un badge, affiche masquée
+  function onMissing(img, fn) {
+    if (img.complete && img.naturalWidth === 0) fn(); else img.addEventListener('error', fn);
+  }
+  document.querySelectorAll('img.logo').forEach(function (img) {
+    onMissing(img, function () {
+      var s = img.getBoundingClientRect().width || 44, b = document.createElement('span');
+      b.className = 'logo-fb'; b.setAttribute('aria-hidden', 'true'); b.textContent = 'RFL';
+      b.style.cssText = 'width:' + s + 'px;height:' + s + 'px;font-size:' + Math.round(s * .34) + 'px';
+      img.replaceWith(b);
+    });
+  });
+  var aff = document.querySelector('#affiche img');
+  if (aff) onMissing(aff, function () { document.querySelector('.edition').classList.add('no-affiche'); });
+})();
+</script>
+</body>
+</html>
