@@ -18,7 +18,7 @@
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:80px}
-body{margin:0;background:var(--paper);color:var(--ink);font-family:'DM Sans',system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:'DM Sans',system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden;overflow-x:clip}
 a{color:var(--red);text-decoration:none}a:hover{color:var(--red-dark)}
 img{display:block;max-width:100%}
 .mono{font-family:'DM Mono',monospace}
@@ -37,7 +37,7 @@ img{display:block;max-width:100%}
 .logo{border-radius:50%;background:linear-gradient(135deg,#E2611E,#C8152B);object-fit:cover}
 
 /* Header */
-header{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(247,241,232,.88);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+header{position:fixed;top:0;left:0;right:0;z-index:50;-webkit-transform:translateZ(0);transform:translateZ(0);background:rgba(247,241,232,.88);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
 .hbar{max-width:1320px;margin:0 auto;padding:12px var(--pad-x);display:flex;align-items:center;justify-content:space-between;gap:20px}
 .brand{display:flex;align-items:center;gap:10px;color:var(--ink)}.brand:hover{color:var(--ink)}
 .brand .logo{width:44px;height:44px;box-shadow:0 0 0 1px rgba(185,119,63,.35)}
@@ -168,7 +168,7 @@ a.partner.empty:hover{border-color:var(--red);color:var(--red)}
       <span class="brand-name">RUN FOR HOPE<small>&amp; SOLIDARITY</small></span>
     </a>
     <nav class="dnav" aria-label="Navigation principale">
-      <a href="#concept">Le concept</a><a href="#programme">Programme</a><a href="#infos">Infos pratiques</a><a href="#cause">La cause</a><a href="#faq">FAQ</a>
+      <a href="#concept">Le concept</a><a href="#fondatrice">La fondatrice</a><a href="#programme">Programme</a><a href="#infos">Infos pratiques</a><a href="#cause">La cause</a><a href="#faq">FAQ</a>
     </nav>
     <div class="hright">
       <a class="ig" href="https://www.instagram.com/runforhope.be/" target="_blank" rel="noopener" aria-label="Instagram @runforhope.be"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg></a>
@@ -177,7 +177,7 @@ a.partner.empty:hover{border-color:var(--red);color:var(--red)}
     </div>
   </div>
   <nav class="mnav" aria-label="Navigation mobile">
-    <a href="#concept">Le concept</a><a href="#programme">Programme</a><a href="#infos">Infos pratiques</a><a href="#cause">La cause</a><a href="#faq">FAQ</a>
+    <a href="#concept">Le concept</a><a href="#fondatrice">La fondatrice</a><a href="#programme">Programme</a><a href="#infos">Infos pratiques</a><a href="#cause">La cause</a><a href="#faq">FAQ</a>
   </nav>
 </header>
 
@@ -251,7 +251,6 @@ a.partner.empty:hover{border-color:var(--red);color:var(--red)}
 <section id="concept" class="section">
   <div class="head-row">
     <div><div class="eyebrow">01 · Le concept</div><h2 class="h2">Plus qu'une<br>course.</h2></div>
-    <p class="lead">Pas besoin d'être sportif : on court à son rythme, ensemble, pour une cause.</p>
   </div>
   <div class="g-auto" style="grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr))">
     <article class="card" style="overflow:hidden;display:flex;flex-direction:column">
@@ -297,7 +296,7 @@ a.partner.empty:hover{border-color:var(--red);color:var(--red)}
     <div>
       <div class="eyebrow">02 · Programme</div>
       <h2 class="h2">Le jour J.</h2>
-      <p style="margin:20px 0 0;max-width:380px;font-size:17px;line-height:1.55;color:var(--muted)">Un dimanche après-midi, trois heures pour se retrouver. Horaires indicatifs, basés sur l'édition 2026.</p>
+      <p style="margin:20px 0 0;max-width:380px;font-size:17px;line-height:1.55;color:var(--muted)">Un après-midi, trois heures pour se retrouver.</p>
       <div style="margin-top:32px;width:clamp(180px,22vw,260px);aspect-ratio:1;border-radius:50%;border:2px dashed rgba(200,21,43,.4);display:flex;align-items:center;justify-content:center;position:relative">
         <div style="position:absolute;inset:18px;border-radius:50%;border:2px solid rgba(226,97,30,.35)"></div>
         <div style="text-align:center"><div style="font-family:Anton,sans-serif;font-size:clamp(56px,6vw,80px);line-height:.9">5 KM</div><div class="mono" style="font-size:12px;color:var(--muted2);margin-top:6px">DÉPART BASILIQUE</div></div>
@@ -356,7 +355,6 @@ a.partner.empty:hover{border-color:var(--red);color:var(--red)}
 <section class="section" style="padding-top:clamp(64px,9vw,120px)">
   <div class="head-row">
     <div><div class="eyebrow">05 · Édition 2026</div><h2 class="h2">On y était.</h2></div>
-    <p class="lead">« Mental Strength Lab &amp; Run for Hope », dimanche 27 septembre 2026, au pied de la Basilique de Koekelberg.</p>
   </div>
   <div class="flyer-nav" hidden><button type="button" class="fprev" aria-label="Flyer précédent">←</button><button type="button" class="fnext" aria-label="Flyer suivant">→</button></div>
   <div class="flyers" tabindex="0" aria-label="Affiches des éditions">
@@ -371,7 +369,7 @@ a.partner.empty:hover{border-color:var(--red);color:var(--red)}
   <figure style="margin:clamp(40px,6vw,72px) 0 0;display:grid;grid-template-columns:auto minmax(0,1fr);gap:20px;align-items:start;max-width:980px">
     <span aria-hidden="true" style="font-family:Anton,sans-serif;font-size:clamp(80px,10vw,140px);line-height:.7;color:var(--red)">“</span>
     <div>
-      <blockquote class="anton" style="margin:0;font-size:clamp(30px,4vw,54px);line-height:1.05;text-wrap:pretty">Courir ensemble. Aider ensemble. Chaque pas compte.</blockquote>
+      <blockquote class="anton" style="margin:0;font-size:clamp(30px,4vw,54px);line-height:1.05;text-wrap:pretty">Courir ensemble pour une cause. Chaque pas compte.</blockquote>
       <figcaption class="mono" style="margin-top:16px;font-size:13px;color:var(--muted2)">La devise de Run for Hope &amp; Solidarity</figcaption>
     </div>
   </figure>
