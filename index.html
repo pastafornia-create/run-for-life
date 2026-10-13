@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Run for Life · Course solidaire 5 km · Bruxelles</title>
-<meta name="description" content="Run for Life : un atelier de force mentale, une course de 5 km ouverte à tous à Koekelberg, et chaque pas pour la lutte contre la drépanocytose.">
+<title>Run for Hope &amp; Solidarity · Course solidaire 5 km · Bruxelles</title>
+<meta name="description" content="Run for Hope &amp; Solidarity : une course solidaire de 5 km ouverte à tous à Koekelberg, à votre rythme, en courant ou en marchant. Chaque édition soutient une cause.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -114,6 +114,21 @@ h1{margin:0;font-family:Anton,sans-serif;font-weight:400;font-size:clamp(76px,15
 .moment b{font-weight:400;font-size:clamp(22px,2.4vw,32px);line-height:1}
 a.partner.empty:hover{border-color:var(--red);color:var(--red)}
 
+/* Fondatrice */
+.founder-photo{margin-top:32px;width:clamp(160px,18vw,220px);aspect-ratio:1;border-radius:50%;background:linear-gradient(135deg,#F29B62,#C8152B);display:flex;align-items:center;justify-content:center;overflow:hidden}
+.founder-photo span{font-family:Anton,sans-serif;font-size:clamp(40px,4.4vw,56px);color:rgba(255,255,255,.9)}
+.founder-photo{position:relative;width:clamp(200px,22vw,280px);box-shadow:0 0 0 6px var(--card),0 0 0 8px rgba(200,21,43,.25)}
+.founder-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.brand-name small{display:block;font-size:.5em;letter-spacing:.08em;color:var(--red);margin-top:3px}
+.h1-sub{display:block;font-size:.32em;line-height:1;letter-spacing:.02em;margin-top:.18em;color:var(--ink)}
+
+/* Formulaire groupes */
+.frow{display:flex;flex-direction:column;gap:6px}
+.frow label{font-family:'DM Mono',monospace;font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--rust)}
+.frow input,.frow textarea{font:inherit;font-size:16px;color:var(--ink);background:#fff;border:1.5px solid rgba(26,20,18,.15);border-radius:12px;padding:12px 14px;min-height:48px;resize:vertical}
+.frow input:focus,.frow textarea:focus{outline:none;border-color:var(--red);box-shadow:0 0 0 3px rgba(200,21,43,.12)}
+.frow input[aria-invalid="true"]{border-color:var(--red)}
+
 /* Fallback logo */
 .logo-fb{border-radius:50%;background:linear-gradient(135deg,#E2611E,#C8152B);color:#fff;display:flex;align-items:center;justify-content:center;font-family:Anton,sans-serif;flex:none}
 
@@ -141,7 +156,7 @@ a.partner.empty:hover{border-color:var(--red);color:var(--red)}
   <div class="hbar">
     <a href="#top" class="brand">
       <img class="logo" src="assets/logo-run-for-hope.png" alt="Logo Run for Hope">
-      <span>RUN FOR LIFE</span>
+      <span class="brand-name">RUN FOR HOPE<small>&amp; SOLIDARITY</small></span>
     </a>
     <nav class="dnav" aria-label="Navigation principale">
       <a href="#concept">Le concept</a><a href="#programme">Programme</a><a href="#infos">Infos pratiques</a><a href="#cause">La cause</a><a href="#faq">FAQ</a>
@@ -161,11 +176,11 @@ a.partner.empty:hover{border-color:var(--red);color:var(--red)}
   <div class="hero-top">
     <div style="flex:1 1 560px;min-width:0">
       <div class="kicker"><i></i>Course solidaire · 5 km · Bruxelles</div>
-      <h1>Run<br>for <span class="grad-text">life</span></h1>
+      <h1>Run<br>for <span class="grad-text">hope</span><span class="h1-sub">&amp; Solidarity</span></h1>
     </div>
     <div class="hero-side">
-      <p style="margin:0;font-size:clamp(20px,2vw,24px);line-height:1.3;font-weight:500;text-wrap:pretty">Courir ensemble. Se dépasser. Faire du bien.</p>
-      <p style="margin:0;font-size:16px;line-height:1.55;color:var(--muted);text-wrap:pretty">Un atelier de force mentale, une course de 5 km ouverte à tous, et chaque pas pour la lutte contre la drépanocytose.</p>
+      <p style="margin:0;font-size:clamp(20px,2vw,24px);line-height:1.3;font-weight:500;text-wrap:pretty">Courir ensemble. Aider ensemble. Chaque pas compte.</p>
+      <p style="margin:0;font-size:16px;line-height:1.55;color:var(--muted);text-wrap:pretty">Une course de 5 km ouverte à tous, à votre rythme, en courant ou en marchant. Et chaque pas compte pour une cause.</p>
       <div style="display:flex;flex-wrap:wrap;gap:10px">
         <a class="btn btn-grad js-cta" href="#" style="min-height:52px;padding:0 26px;font-size:16px">Je m'inscris →</a>
         <a class="btn btn-line" href="#cause" style="min-height:52px;padding:0 24px;font-size:16px">Je fais un don</a>
@@ -216,7 +231,7 @@ a.partner.empty:hover{border-color:var(--red);color:var(--red)}
     <div style="position:relative;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:28px">
       <div style="border-left:2px solid rgba(255,255,255,.35);padding-left:18px"><div class="anton js-count" data-to="5" data-suffix=" km" style="font-size:clamp(52px,6vw,84px);line-height:1">5 km</div><div style="font-size:16px;font-weight:500;margin-top:8px">à courir ou à marcher</div></div>
       <div style="border-left:2px solid rgba(255,255,255,.35);padding-left:18px"><div class="anton" style="font-size:clamp(52px,6vw,84px);line-height:1">0 €</div><div style="font-size:16px;font-weight:500;margin-top:8px">pour s'inscrire</div></div>
-      <div style="border-left:2px solid rgba(255,255,255,.35);padding-left:18px"><div class="anton js-count" data-to="3" data-suffix=" h" style="font-size:clamp(52px,6vw,84px);line-height:1">3 h</div><div style="font-size:16px;font-weight:500;margin-top:8px">d'atelier, de course et de fête</div></div>
+      <div style="border-left:2px solid rgba(255,255,255,.35);padding-left:18px"><div class="anton js-count" data-to="3" data-suffix=" h" style="font-size:clamp(52px,6vw,84px);line-height:1">3 h</div><div style="font-size:16px;font-weight:500;margin-top:8px">de course et de fête</div></div>
       <div style="border-left:2px solid rgba(255,255,255,.35);padding-left:18px"><div class="anton" style="font-size:clamp(52px,6vw,84px);line-height:1">1</div><div style="font-size:16px;font-weight:500;margin-top:8px">cause commune</div></div>
     </div>
   </div>
@@ -226,12 +241,12 @@ a.partner.empty:hover{border-color:var(--red);color:var(--red)}
 <section id="concept" class="section">
   <div class="head-row">
     <div><div class="eyebrow">01 · Le concept</div><h2 class="h2">Plus qu'une<br>course.</h2></div>
-    <p class="lead">Run for Life réunit la tête, les jambes et le cœur : on prépare son mental, on court à son rythme, et on le fait pour une cause.</p>
+    <p class="lead">Pas besoin d'être sportif : on court ou on marche à son rythme, ensemble, pour une cause.</p>
   </div>
   <div class="g-auto" style="grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr))">
     <article class="card" style="overflow:hidden;display:flex;flex-direction:column">
       <div class="tile" style="background:linear-gradient(135deg,#F29B62,#E2611E)"><span class="anton tnum">01</span><svg viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="60" r="14" fill="#fff"/><circle cx="60" cy="60" r="30" fill="none" stroke="rgba(255,255,255,.7)" stroke-width="3"/><circle cx="60" cy="60" r="46" fill="none" stroke="rgba(255,255,255,.4)" stroke-width="3"/><circle cx="60" cy="60" r="58" fill="none" stroke="rgba(255,255,255,.2)" stroke-width="3"/></svg></div>
-      <div style="padding:22px 22px 26px"><h3 class="anton" style="margin:0;font-size:30px;line-height:1">Mental Strength Lab</h3><p style="margin:12px 0 0;font-size:16px;line-height:1.55;color:var(--muted)">Un atelier pour travailler la force mentale : respiration, visualisation, et les outils pour tenir quand c'est dur, en course comme dans la vie.</p></div>
+      <div style="padding:22px 22px 26px"><h3 class="anton" style="margin:0;font-size:30px;line-height:1">Ouvert à tous</h3><p style="margin:12px 0 0;font-size:16px;line-height:1.55;color:var(--muted)">Jamais couru ? Parfait. Pas de chrono, pas de classement, des bénévoles ferment la marche : personne ne finit seul.</p></div>
     </article>
     <article class="card" style="overflow:hidden;display:flex;flex-direction:column">
       <div class="tile" style="background:linear-gradient(135deg,#E2611E,#C8152B)"><span class="anton tnum">02</span><svg viewBox="0 0 120 120" aria-hidden="true"><path d="M10 90 C 30 40, 55 110, 70 60 S 100 20, 112 34" fill="none" stroke="#fff" stroke-width="5" stroke-dasharray="1 12" stroke-linecap="round"/><circle cx="10" cy="90" r="7" fill="#fff"/><path d="M106 16 v24 M106 16 h14 l-4 5 4 5 h-14" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round"/></svg></div>
@@ -239,8 +254,30 @@ a.partner.empty:hover{border-color:var(--red);color:var(--red)}
     </article>
     <article class="card" style="overflow:hidden;display:flex;flex-direction:column">
       <div class="tile" style="background:linear-gradient(135deg,#C8152B,#5E0915)"><span class="anton tnum">03</span><svg viewBox="0 0 120 120" aria-hidden="true"><path d="M60 104 C 20 76, 6 52, 18 32 C 30 12, 54 16, 60 36 C 66 16, 90 12, 102 32 C 114 52, 100 76, 60 104Z" fill="#fff"/><path d="M60 36 L 46 92 M60 36 L 74 92" stroke="#C8152B" stroke-width="7" stroke-linecap="round"/></svg></div>
-      <div style="padding:22px 22px 26px"><h3 class="anton" style="margin:0;font-size:30px;line-height:1">La solidarité</h3><p style="margin:12px 0 0;font-size:16px;line-height:1.55;color:var(--muted)">Chaque inscription et chaque don soutiennent la lutte contre la drépanocytose aux côtés de SCDFC.</p></div>
+      <div style="padding:22px 22px 26px"><h3 class="anton" style="margin:0;font-size:30px;line-height:1">La solidarité</h3><p style="margin:12px 0 0;font-size:16px;line-height:1.55;color:var(--muted)">Chaque édition court pour une cause différente, aux côtés d'une association partenaire. En 2026 : la drépanocytose, avec Sickle Cell Fighting Club.</p></div>
     </article>
+  </div>
+</section>
+
+<!-- FONDATRICE -->
+<section id="fondatrice" class="section">
+  <div style="background:var(--card);border:1px solid var(--line);border-radius:clamp(22px,3vw,36px);padding:clamp(28px,5vw,72px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:40px clamp(40px,6vw,96px)">
+    <div>
+      <div class="eyebrow">Le mot de la fondatrice</div>
+      <h2 class="h2" style="font-size:clamp(44px,6.4vw,92px)">Pourquoi<br>j'ai créé<br><span class="grad-text">Run for Hope.</span></h2>
+      <div class="founder-photo"><span aria-hidden="true">RFH</span><img src="assets/fondatrice.jpg" alt="La fondatrice de Run for Hope &amp; Solidarity"></div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:28px">
+      <blockquote style="margin:0;font-size:clamp(18px,1.7vw,21px);line-height:1.6;text-wrap:pretty">
+        <p style="margin:0">« Dans un monde où l'on est souvent très concentré sur soi, j'avais envie d'utiliser ma passion pour le sport afin de créer un impact positif autour de moi.</p>
+        <p style="margin:14px 0 0">Associer le plaisir de courir à une cause utile, aider les autres et apporter un peu d'espoir à ceux qui en ont besoin, c'est ce qui m'a donné envie de créer Run for Hope. Chaque pas peut avoir du sens. »</p>
+      </blockquote>
+      <div style="border-top:1px solid var(--line2);padding-top:24px">
+        <div class="anton" style="font-size:clamp(26px,2.6vw,34px);line-height:1">L'esprit de Run for Hope</div>
+        <p style="margin:12px 0 0;font-size:16px;line-height:1.6;color:var(--muted);text-wrap:pretty">« J'aimerais que chaque participant reparte avec le sentiment d'avoir accompli quelque chose : relever son propre défi en parcourant 5 km, tout en contribuant à une belle action. Au-delà de la course, l'objectif est de créer un moment de partage, de solidarité et d'unité, où chaque pas nous rapproche d'un monde plus solidaire. »</p>
+        <p class="mono" style="margin:18px 0 0;font-size:13px;color:var(--rust);text-transform:uppercase;letter-spacing:.06em">Fondatrice de Run for Hope</p>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -258,7 +295,7 @@ a.partner.empty:hover{border-color:var(--red);color:var(--red)}
     </div>
     <ol class="timeline">
       <li><div class="mono" style="font-size:14px;color:var(--rust);font-weight:500">15:00</div><div class="anton" style="font-size:clamp(28px,3vw,36px);line-height:1.05;margin-top:4px">Accueil &amp; échauffement</div><p style="margin:8px 0 0;font-size:16px;line-height:1.55;color:var(--muted);max-width:480px">Retrait des dossards sur le parvis, échauffement collectif en musique.</p></li>
-      <li><div class="mono" style="font-size:14px;color:var(--rust);font-weight:500">15:30</div><div class="anton" style="font-size:clamp(28px,3vw,36px);line-height:1.05;margin-top:4px">Mental Strength Lab</div><p style="margin:8px 0 0;font-size:16px;line-height:1.55;color:var(--muted);max-width:480px">Atelier force mentale : se préparer dans la tête avant de se lancer.</p></li>
+      <li><div class="mono" style="font-size:14px;color:var(--rust);font-weight:500">15:30</div><div class="anton" style="font-size:clamp(28px,3vw,36px);line-height:1.05;margin-top:4px">Rencontre &amp; échanges</div><p style="margin:8px 0 0;font-size:16px;line-height:1.55;color:var(--muted);max-width:480px">Les organisateurs accueillent chaque participant et prennent le temps d'échanger avec vous avant le départ.</p></li>
       <li><div class="mono" style="font-size:14px;color:var(--rust);font-weight:500">16:00</div><div class="anton" style="font-size:clamp(28px,3vw,36px);line-height:1.05;margin-top:4px">Départ de la course</div><p style="margin:8px 0 0;font-size:16px;line-height:1.55;color:var(--muted);max-width:480px">Départ groupé pour 5 km. Course ou marche, chacun à son allure.</p></li>
       <li><div class="mono" style="font-size:14px;color:var(--rust);font-weight:500">17:00</div><div class="anton" style="font-size:clamp(28px,3vw,36px);line-height:1.05;margin-top:4px">Arrivée &amp; moment convivial</div><p style="margin:8px 0 0;font-size:16px;line-height:1.55;color:var(--muted);max-width:480px">Médailles, photos, boissons et annonce du montant collecté. Fin vers 18:00.</p></li>
     </ol>
@@ -288,14 +325,14 @@ a.partner.empty:hover{border-color:var(--red);color:var(--red)}
   <div class="wrap" style="position:relative;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:48px clamp(40px,6vw,96px);align-items:center">
     <div>
       <div class="eyebrow" style="color:#F29B62">04 · La cause</div>
-      <h2 class="h2" style="font-size:clamp(48px,7.6vw,108px)">Chaque pas<br>compte<br><span style="color:#FF5A4E">contre la<br>drépanocytose.</span></h2>
+      <h2 class="h2" style="font-size:clamp(48px,7.6vw,108px)">Chaque pas<br>compte<br><span style="color:#FF5A4E">contre la<br>maladie.</span></h2>
     </div>
     <div>
-      <p style="margin:0;font-size:clamp(18px,1.8vw,21px);line-height:1.55;text-wrap:pretty">La drépanocytose est la maladie génétique la plus répandue au monde. Elle provoque des crises de douleur intenses, de la fatigue, et reste trop peu connue.</p>
-      <p style="margin:18px 0 0;font-size:16px;line-height:1.6;color:var(--soft);text-wrap:pretty">Les fonds collectés soutiennent <strong style="color:var(--paper)">SCDFC, Sickle Cell Disease Fighting Club</strong>, qui accompagne les patients et leurs familles et sensibilise le grand public.</p>
+      <p style="margin:0;font-size:clamp(18px,1.8vw,21px);line-height:1.55;text-wrap:pretty">À chaque édition, Run for Hope &amp; Solidarity court pour un combat différent et s'associe à une nouvelle association. La cause de l'édition 2027 sera annoncée prochainement.</p>
+      <p style="margin:18px 0 0;font-size:16px;line-height:1.6;color:var(--soft);text-wrap:pretty">En 2026, les coureurs se sont mobilisés contre la drépanocytose, la maladie génétique la plus répandue au monde, aux côtés de <a href="https://www.instagram.com/sicklecell_fightingclub/" target="_blank" rel="noopener" style="color:var(--paper);font-weight:700;text-decoration:underline">Sickle Cell Fighting Club</a>.</p>
       <div style="margin-top:34px;background:rgba(247,241,232,.06);border:1px solid rgba(247,241,232,.12);border-radius:20px;padding:24px">
         <div class="anton" style="font-size:clamp(30px,3.2vw,40px);line-height:1.05">Courir, c'est gratuit.<br><span style="color:#F29B62">Donner, c'est libre.</span></div>
-        <p style="margin:12px 0 0;font-size:15px;line-height:1.6;color:var(--soft)">Chaque don, petit ou grand, aide SCDFC à faire connaître la maladie et à soutenir les familles.</p>
+        <p style="margin:12px 0 0;font-size:15px;line-height:1.6;color:var(--soft)">Chaque don, petit ou grand, est reversé à l'association partenaire de l'édition.</p>
         <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:20px;align-items:center">
           <a class="btn js-cta don" data-modal="don" href="#" style="min-height:52px;padding:0 26px;background:var(--paper);color:var(--ink);font-size:16px">Je fais un don →</a>
         </div>
@@ -317,7 +354,7 @@ a.partner.empty:hover{border-color:var(--red);color:var(--red)}
     </div>
     <div class="moments">
       <div class="moment" style="background:linear-gradient(135deg,#F29B62,#E2611E)"><span class="mono">15:00</span><b class="anton">Échauffement collectif</b></div>
-      <div class="moment" style="background:linear-gradient(135deg,#E2611E,#C8152B)"><span class="mono">15:30</span><b class="anton">Mental Strength Lab</b></div>
+      <div class="moment" style="background:linear-gradient(135deg,#E2611E,#C8152B)"><span class="mono">15:30</span><b class="anton">Rencontre &amp; échanges</b></div>
       <div class="moment" style="background:linear-gradient(135deg,#C8152B,#8F0E1E)"><span class="mono">16:00</span><b class="anton">Départ, mains levées</b></div>
       <div class="moment" style="background:linear-gradient(135deg,#8F0E1E,#1A1412)"><span class="mono">17:00</span><b class="anton">Arrivée &amp; médailles</b></div>
     </div>
@@ -325,8 +362,8 @@ a.partner.empty:hover{border-color:var(--red);color:var(--red)}
   <figure style="margin:clamp(40px,6vw,72px) 0 0;display:grid;grid-template-columns:auto minmax(0,1fr);gap:20px;align-items:start;max-width:980px">
     <span aria-hidden="true" style="font-family:Anton,sans-serif;font-size:clamp(80px,10vw,140px);line-height:.7;color:var(--red)">“</span>
     <div>
-      <blockquote class="anton" style="margin:0;font-size:clamp(30px,4vw,54px);line-height:1.05;text-wrap:pretty">Courir ensemble. Se dépasser. Faire du bien.</blockquote>
-      <figcaption class="mono" style="margin-top:16px;font-size:13px;color:var(--muted2)">La devise de Run for Life</figcaption>
+      <blockquote class="anton" style="margin:0;font-size:clamp(30px,4vw,54px);line-height:1.05;text-wrap:pretty">Courir ensemble. Aider ensemble. Chaque pas compte.</blockquote>
+      <figcaption class="mono" style="margin-top:16px;font-size:13px;color:var(--muted2)">La devise de Run for Hope &amp; Solidarity</figcaption>
     </div>
   </figure>
 </section>
@@ -335,13 +372,35 @@ a.partner.empty:hover{border-color:var(--red);color:var(--red)}
 <section class="section">
   <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px;border-top:1px solid var(--line2);padding-top:28px;margin-bottom:24px">
     <div class="eyebrow" style="margin:0">Ils courent avec nous</div>
-    <a class="btn btn-line" href="mailto:contact@runforlife.example" style="min-height:44px;padding:0 20px;font-size:14px">Devenir partenaire →</a>
+    <a class="btn btn-line" href="mailto:contact@runforhope.example" style="min-height:44px;padding:0 20px;font-size:14px">Devenir partenaire →</a>
   </div>
   <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,160px),1fr));gap:12px">
-    <div class="partner card" style="border-radius:16px;font-family:Georgia,serif;font-size:24px;color:var(--red)">SCDFC</div>
+    <div class="partner card" style="border-radius:16px;font-family:Georgia,serif;font-size:19px;line-height:1.1;text-align:center;color:var(--red)">Sickle Cell<br>Fighting Club</div>
     <div class="partner card" style="border-radius:16px;font-family:Anton,sans-serif;font-size:22px;letter-spacing:.04em">DETTY EUROPE</div>
     <div class="partner card" style="border-radius:16px;font-family:Anton,sans-serif;font-size:18px;line-height:.95;text-align:center">MENTAL<br>STRENGTH LAB</div>
-    <a class="partner empty" href="mailto:contact@runforlife.example">Votre marque ici ?</a>
+    <a class="partner empty" href="mailto:contact@runforhope.example">Votre marque ici ?</a>
+  </div>
+</section>
+
+<!-- GROUPES -->
+<section id="groupes" class="section">
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:32px clamp(40px,6vw,96px);align-items:start">
+    <div>
+      <div class="eyebrow">Entre amis, en club, en entreprise</div>
+      <h2 class="h2" style="font-size:clamp(44px,6.4vw,92px)">Venir<br>en groupe ?</h2>
+      <p class="lead" style="margin-top:20px">Dites-nous qui vous êtes et combien vous serez : on vous recontacte pour organiser votre venue.</p>
+    </div>
+    <form id="groupform" class="card" style="padding:clamp(22px,3vw,32px);display:grid;gap:14px" novalidate>
+      <div class="frow"><label for="g-nom">Nom et prénom</label><input id="g-nom" name="nom" autocomplete="name" required></div>
+      <div class="frow"><label for="g-mail">E-mail</label><input id="g-mail" name="email" type="email" autocomplete="email" required></div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,160px),1fr));gap:14px">
+        <div class="frow"><label for="g-struct">Groupe ou entreprise</label><input id="g-struct" name="structure"></div>
+        <div class="frow"><label for="g-nb">Nombre de personnes</label><input id="g-nb" name="participants" type="number" min="2" inputmode="numeric"></div>
+      </div>
+      <div class="frow"><label for="g-msg">Message</label><textarea id="g-msg" name="message" rows="3"></textarea></div>
+      <button type="submit" class="btn btn-grad" style="border:0;cursor:pointer;min-height:52px;font:inherit;font-weight:700;font-size:16px">Envoyer la demande →</button>
+      <p id="g-status" role="status" style="margin:0;font-size:14px;color:var(--muted)"></p>
+    </form>
   </div>
 </section>
 
@@ -351,9 +410,9 @@ a.partner.empty:hover{border-color:var(--red);color:var(--red)}
     <div><div class="eyebrow">06 · FAQ</div><h2 class="h2">Vos<br>questions.</h2></div>
     <div id="faqlist" style="border-top:1px solid rgba(26,20,18,.15)">
       <div class="faq-item open"><button type="button" aria-expanded="true"><span class="q">Faut-il être sportif ?</span><span class="ic">−</span></button><p>Non. Le parcours de 5 km se fait en courant, en trottinant ou en marchant. Personne n'est chronométré, on avance ensemble et des bénévoles ferment la marche.</p></div>
-      <div class="faq-item"><button type="button" aria-expanded="false"><span class="q">Combien ça coûte ?</span><span class="ic">+</span></button><p>Rien : l'inscription est entièrement gratuite. Les dons sont libres et soutiennent SCDFC dans la lutte contre la drépanocytose.</p></div>
-      <div class="faq-item"><button type="button" aria-expanded="false"><span class="q">Où va l'argent ?</span><span class="ic">+</span></button><p>Les fonds soutiennent SCDFC (Sickle Cell Disease Fighting Club) dans la lutte contre la drépanocytose. Le montant collecté est publié après chaque édition.</p></div>
-      <div class="faq-item"><button type="button" aria-expanded="false"><span class="q">Peut-on venir en équipe ?</span><span class="ic">+</span></button><p>Oui, et c'est même encouragé : entre amis, en famille, entre collègues ou en club. Contactez-nous pour les inscriptions de groupe ou d'entreprise.</p></div>
+      <div class="faq-item"><button type="button" aria-expanded="false"><span class="q">Combien ça coûte ?</span><span class="ic">+</span></button><p>Rien : l'inscription est entièrement gratuite. Les dons sont libres et reversés à l'association partenaire de l'édition.</p></div>
+      <div class="faq-item"><button type="button" aria-expanded="false"><span class="q">Où va l'argent ?</span><span class="ic">+</span></button><p>Chaque édition soutient une cause différente, avec une association partenaire. En 2026, les fonds sont allés à Sickle Cell Fighting Club, contre la drépanocytose. La cause et l'association de 2027 seront annoncées ici.</p></div>
+      <div class="faq-item"><button type="button" aria-expanded="false"><span class="q">Peut-on venir en équipe ?</span><span class="ic">+</span></button><p>Oui, et c'est même encouragé : entre amis, en famille, entre collègues ou en club. <a href="#groupes">Remplissez le formulaire groupes</a> pour les inscriptions de groupe ou d'entreprise.</p></div>
       <div class="faq-item"><button type="button" aria-expanded="false"><span class="q">Que se passe-t-il s'il pleut ?</span><span class="ic">+</span></button><p>On court quand même : c'est Bruxelles ! En cas d'alerte météo, les inscrits sont prévenus par e-mail et sur Instagram.</p></div>
     </div>
   </div>
@@ -379,16 +438,16 @@ a.partner.empty:hover{border-color:var(--red);color:var(--red)}
     <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:36px">
       <div style="display:flex;align-items:center;gap:14px">
         <img class="logo" src="assets/logo-run-for-hope.png" alt="Logo Run for Hope" style="width:64px;height:64px">
-        <span style="font-family:Anton,sans-serif;font-size:32px;color:var(--paper);line-height:1">RUN FOR LIFE</span>
+        <span style="font-family:Anton,sans-serif;font-size:32px;color:var(--paper);line-height:1">RUN FOR HOPE<small style="display:block;font-size:.5em;letter-spacing:.08em;color:#F29B62;margin-top:4px">&amp; SOLIDARITY</small></span>
       </div>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:24px 48px;flex:0 1 560px;font-size:15px">
         <div style="display:flex;flex-direction:column;gap:10px"><span class="mono" style="font-size:12px;text-transform:uppercase;color:#8C7E74">Suivre</span><a href="https://instagram.com/runforhope.be" target="_blank" rel="noopener" style="color:var(--paper)">Instagram @runforhope.be</a></div>
-        <div style="display:flex;flex-direction:column;gap:10px"><span class="mono" style="font-size:12px;text-transform:uppercase;color:#8C7E74">Contact</span><a href="mailto:contact@runforlife.example" style="color:var(--paper)">contact@runforlife.example</a></div>
+        <div style="display:flex;flex-direction:column;gap:10px"><span class="mono" style="font-size:12px;text-transform:uppercase;color:#8C7E74">Contact</span><a href="mailto:contact@runforhope.example" style="color:var(--paper)">contact@runforhope.example</a></div>
       </div>
     </div>
     <div style="margin-top:48px;padding-top:20px;border-top:1px solid rgba(247,241,232,.12);display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;font-size:13px">
-      <span>Organisé avec DETTY EUROPE, au profit de SCDFC</span>
-      <span>© 2026 Run for Life, Bruxelles</span>
+      <span>Un concept porté par Mental Strength Lab</span>
+      <span>© 2026 Run for Hope &amp; Solidarity, Bruxelles</span>
     </div>
   </div>
 </footer>
@@ -401,7 +460,7 @@ a.partner.empty:hover{border-color:var(--red);color:var(--red)}
     <p id="modal-text" style="margin:14px 0 0;font-size:16px;line-height:1.6;color:var(--muted)">L'inscription sera gratuite. Suivez-nous sur Instagram pour être prévenu·e dès l'ouverture, ou écrivez-nous.</p>
     <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:22px">
       <a class="btn btn-grad" href="https://instagram.com/runforhope.be" target="_blank" rel="noopener" style="min-height:48px;padding:0 22px;font-size:15px">Suivre @runforhope.be</a>
-      <a class="btn btn-line" href="mailto:contact@runforlife.example" style="min-height:48px;padding:0 22px;font-size:15px">Nous écrire</a>
+      <a class="btn btn-line" href="mailto:contact@runforhope.example" style="min-height:48px;padding:0 22px;font-size:15px">Nous écrire</a>
     </div>
   </div>
 </div>
@@ -412,11 +471,34 @@ a.partner.empty:hover{border-color:var(--red);color:var(--red)}
 (function () {
   var TARGET = new Date('2027-09-26T16:00:00+02:00').getTime();
 
-  // Fenêtre « bientôt » pour les boutons d'inscription et de don (pas de lien externe)
+  // Réglages à compléter
+  // EVENTBRITE_ID : numéro de l'événement Eventbrite 2027 (les chiffres à la fin du lien).
+  //   Vide = les boutons « Je m'inscris » ouvrent la fenêtre « bientôt ».
+  //   Rempli = la billetterie Eventbrite s'ouvre par-dessus le site, sans changer de page.
+  // FORM_ENDPOINT : adresse Formspree du formulaire groupes. Vide = le formulaire prépare un e-mail.
+  var EVENTBRITE_ID = '';
+  var FORM_ENDPOINT = '';
+  var CONTACT_EMAIL = 'contact@runforhope.example';
+
+  if (EVENTBRITE_ID) {
+    var signups = document.querySelectorAll('.js-cta:not([data-modal="don"])');
+    signups.forEach(function (a, i) { a.id = a.id || 'eb-trigger-' + i; a.classList.remove('js-cta'); });
+    var eb = document.createElement('script');
+    eb.src = 'https://www.eventbrite.com/static/widgets/eb_widgets.js';
+    eb.onload = function () {
+      signups.forEach(function (a) {
+        a.addEventListener('click', function (e) { e.preventDefault(); });
+        window.EBWidgets.createWidget({ widgetType: 'checkout', eventId: EVENTBRITE_ID, modal: true, modalTriggerElementId: a.id });
+      });
+    };
+    document.head.appendChild(eb);
+  }
+
+  // Fenêtre « bientôt » pour les boutons d'inscription et de don
   var modal = document.getElementById('modal'), lastFocus = null;
   var copy = {
     inscription: ['Édition 2027', 'Les inscriptions ouvrent bientôt.', "L'inscription sera gratuite. Suivez-nous sur Instagram pour être prévenu·e dès l'ouverture, ou écrivez-nous."],
-    don: ['Faire un don', 'Merci pour votre soutien.', "Pour faire un don au profit de SCDFC, écrivez-nous : nous vous indiquerons comment contribuer."]
+    don: ['Faire un don', 'Merci pour votre soutien.', "Pour faire un don à l'association partenaire de l'édition, écrivez-nous : nous vous indiquerons comment contribuer."]
   };
   function openModal(kind) {
     var c = copy[kind] || copy.inscription;
@@ -439,6 +521,35 @@ a.partner.empty:hover{border-color:var(--red);color:var(--red)}
   modal.querySelector('.modal-x').addEventListener('click', closeModal);
   modal.addEventListener('click', function (e) { if (e.target === modal) closeModal(); });
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !modal.hidden) closeModal(); });
+
+  // Formulaire groupes
+  var form = document.getElementById('groupform'), status = document.getElementById('g-status');
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var bad = null;
+    ['g-nom', 'g-mail'].forEach(function (id) {
+      var f = document.getElementById(id), ok = f.value.trim() && f.checkValidity();
+      f.setAttribute('aria-invalid', ok ? 'false' : 'true');
+      if (!ok && !bad) bad = f;
+    });
+    if (bad) { status.textContent = 'Merci d’indiquer votre nom et un e-mail valide.'; bad.focus(); return; }
+    var data = new FormData(form);
+    if (!FORM_ENDPOINT) {
+      var body = ['Nom : ' + data.get('nom'), 'E-mail : ' + data.get('email'), 'Groupe : ' + data.get('structure'),
+        'Nombre de personnes : ' + data.get('participants'), '', data.get('message')].join('\n');
+      location.href = 'mailto:' + CONTACT_EMAIL + '?subject=' + encodeURIComponent('Inscription de groupe') + '&body=' + encodeURIComponent(body);
+      status.textContent = 'Votre messagerie s’ouvre avec votre demande prête à envoyer.';
+      return;
+    }
+    status.textContent = 'Envoi en cours…';
+    fetch(FORM_ENDPOINT, { method: 'POST', body: data, headers: { Accept: 'application/json' } })
+      .then(function (r) {
+        if (!r.ok) throw new Error();
+        form.reset();
+        status.textContent = 'Merci ! Votre demande est bien partie, on vous recontacte très vite.';
+      })
+      .catch(function () { status.textContent = 'L’envoi n’a pas fonctionné. Écrivez-nous à ' + CONTACT_EMAIL + '.'; });
+  });
 
   // Menu mobile
   var hdr = document.getElementById('hdr'), burger = hdr.querySelector('.burger');
@@ -466,7 +577,7 @@ a.partner.empty:hover{border-color:var(--red);color:var(--red)}
   tick(); setInterval(tick, 1000);
 
   // Marquee
-  var words = ['Courir ensemble', 'Se dépasser', 'Faire du bien', 'Mental Strength Lab', '5 km pour la vie', 'Koekelberg · Bruxelles'];
+  var words = ['Courir ensemble', 'Aider ensemble', 'Chaque pas compte', 'Débutants bienvenus', '5 km pour la vie', 'Koekelberg · Bruxelles'];
   var run = words.map(function (w) { return '<span>' + w + '</span><i></i>'; }).join('');
   document.getElementById('mtrack').innerHTML = '<div class="mrun">' + run + '</div><div class="mrun">' + run + '</div>';
 
@@ -511,11 +622,13 @@ a.partner.empty:hover{border-color:var(--red);color:var(--red)}
   document.querySelectorAll('img.logo').forEach(function (img) {
     onMissing(img, function () {
       var s = img.getBoundingClientRect().width || 44, b = document.createElement('span');
-      b.className = 'logo-fb'; b.setAttribute('aria-hidden', 'true'); b.textContent = 'RFL';
+      b.className = 'logo-fb'; b.setAttribute('aria-hidden', 'true'); b.textContent = 'RFH';
       b.style.cssText = 'width:' + s + 'px;height:' + s + 'px;font-size:' + Math.round(s * .34) + 'px';
       img.replaceWith(b);
     });
   });
+  var fp = document.querySelector('.founder-photo img');
+  if (fp) onMissing(fp, function () { fp.remove(); });
   var aff = document.querySelector('#affiche img');
   if (aff) onMissing(aff, function () { document.querySelector('.edition').classList.add('no-affiche'); });
 })();
